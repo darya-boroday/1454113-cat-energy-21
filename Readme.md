@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Дарья Бородай](https://up.htmlacademy.ru/adaptive/21/user/1454113).
-* Наставник: `Неизвестно`.
+* Наставник: `Альберт Шакиров`.
 
 ---
 
