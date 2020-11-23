@@ -4,31 +4,32 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="page-body">
+<body class="page__body">
   <header class="page-header">
     <div class="page-header__wrapper">
-      <a class="page-header__logo logo">
+      <a class="page-header__logo logo" href="index.html">
         <img src="#" width="33" height="37" alt="Логотип cat energy">
       </a>
-      <a class="page-header__logo-text logo-text">
+      <a class="page-header__logo-text logo-text" href="index.html">
         <img src="#" width="101" height="18" alt="Cat Energy">
       </a>
       <button class="toggle-main-nav" type="button">Открыть меню</button>
       <nav class="main-nav">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a>
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--active">
+            <a href="index.html">
               Главная
             </a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__item">
             <a href="catalog.html">
               Каталог продукции
             </a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__item">
             <a href="form.html">
               Подбор программы
             </a>
@@ -193,7 +194,7 @@
       </div>
     </section>
     <section class="special-card">
-      <h3 class="special-card__title catalog__title">Показать еще 100500 товаров</h3>
+      <h3 class="special-card__title item-catalog__title">Показать еще 100500 товаров</h3>
       <p class="special-card__text">На самом деле вкусов гораздо больше!</p>
       <a class="special-card__button button button-order" href="#">ПОКАЗАТЬ ВСЁ</a>
     </section>
@@ -209,7 +210,7 @@
                 <span>200 Р.</span>
               </div>
             </div>
-            <a class="extra-products__order button button-order" href="#">ЗАКАЗАТЬ</a>
+            <button class="extra-products__order button button-order" href="#">ЗАКАЗАТЬ</button>
           </li>
           <li class="extra-products__item">
             <h3 class="extra-products__title-item">Питьевая вода</h3>
@@ -219,7 +220,7 @@
                 <span>50 Р.</span>
               </div>
             </div>
-            <a class="extra-products__order button button-order" href="#">ЗАКАЗАТЬ</a>
+            <button class="extra-products__order button button-order" href="#">ЗАКАЗАТЬ</button>
           </li>
           <li class="extra-products__item">
             <h3 class="extra-products__title-item">Молоко</h3>
@@ -229,7 +230,7 @@
                 <span>100 Р.</span>
               </div>
             </div>
-            <a class="extra-products__order button button-order" href="#">ЗАКАЗАТЬ</a>
+            <button class="extra-products__order button button-order" href="#">ЗАКАЗАТЬ</button>
           </li>
           <li class="extra-products__item">
             <h3 class="extra-products__title-item">Витамины</h3>
@@ -239,19 +240,21 @@
                 <span>300 Р.</span>
               </div>
             </div>
-            <a class="extra-products__order button button-order" href="#">ЗАКАЗАТЬ</a>
+            <button class="extra-products__order button button-order" href="#">ЗАКАЗАТЬ</button>
           </li>
         </ul>
       </div>
     </section>
     <div class="gift">
-      <p class="girt__text">Закажите все
-        и получите чехол для
-        кота в подарок!</p>
+      <div class="gift__wrapper">
+        <p class="girt__text">Закажите все
+          и получите чехол для
+          кота в подарок!</p>
+      </div>
     </div>
     <section class="contacts">
       <h2 class="visually-hidden">Контактная информация</h2>
-      <div class="contacts-wrapper">
+      <div class="contacts__wrapper">
         <p class="contacts__alert">приглашаем <br>
           к сотрудничеству<br>дилеров!</p>
         <p class="contacts__adress">ул. Большая
