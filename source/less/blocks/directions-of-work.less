@@ -1,14 +1,42 @@
+.directions-of-work__wrapper {
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet) {
+    width: 708px;
+  }
+  @media (min-width: @desktop) {
+    width: 1220px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .directions-of-work {
-  margin-top: 22px;
-  margin-bottom: 27px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .directions-of-work__type {
   background-color: @basicgrey;
+  min-height: 266px;
+  @media (min-width: @tablet) {
+    min-height: 372px;
+  }
+  @media (min-width: @desktop) {
+    width: 570px;
+    min-height: 374px;
+  }
 }
 
 .directions-of-work__type--slim {
   margin-bottom: 20px;
+  @media (min-width: @tablet) {
+    margin-bottom: 30px;
+  }
+  @media (min-width: @desktop) {
+    margin: 0;
+  }
 }
 
 .directions-of-work__title {
@@ -18,15 +46,20 @@
   margin-left: 91px;
   margin-bottom: 29px;
   padding-top: 30px;
+  font-weight: 400;
+  letter-spacing: -1px;
+  color: @black;
 }
 
-.directions-of-work__description{
+.directions-of-work__description {
   font-weight: Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: @specialdarkgrey;
   padding-left: 20px;
-  margin-top: 0px;
+  margin-top: 0;
+  padding-bottom: 23px;
+  padding-right: 33px;
 }
 
 .directions-of-work__catalog-link {
@@ -36,7 +69,10 @@
   text-transform: uppercase;
   padding-left: 20px;
   color: @black;
-  &:active{
-    color:fade(@black;30%);
+  padding-top: 15px;
+  margin-bottom: 18px;
+
+  &:active {
+    color: fade(@black;30%);
   }
 }
