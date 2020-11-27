@@ -1,8 +1,10 @@
-.example__wrapper {
+.example {
   background-color: @examplegrey;
-  margin-left: 20px;
-  margin-right: 20px;
-  padding-bottom: 25px;
+}
+
+.example__wrapper {
+  padding: 33px 20px 37px;
+  background-color: @examplegrey;
   @media (min-width: @tablet) {
     width: 640px;
     min-height: 1078px;
@@ -15,28 +17,22 @@
   }
 }
 
-.example {
-  background-color: @examplegrey;
-}
-
 .example__title {
+  margin: 0;
+  padding-bottom: 33px;
   font-size: 36px;
   font-weight: 400;
-  letter-spacing: -2px;
   line-height: 40px;
-  margin: 0;
-  padding-top: 27px;
-  padding-bottom: 33px;
   text-align: left;
 }
 
 .example__decrtiption {
+  margin: 0;
+  padding-bottom: 26px;
+  font-family: Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
-  font-family: Arial, sans-serif;
   color: @specialdarkgrey;
-  margin-top: 0;
-  margin-bottom: 26px;
 }
 
 .example__number {
@@ -54,16 +50,22 @@
 .example__spendings {
   font-size: 14px;
   line-height: 20px;
-  text-transform: uppercase;
   font-weight: bold;
+  text-transform: uppercase;
   text-align: center;
 }
 
+.example__toggles {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .slider__toggle {
-  color: @black;
+  padding: 4px 12px;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-  padding: 4px 12px;
   border: none;
+  color: @black;
 }
