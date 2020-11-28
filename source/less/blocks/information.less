@@ -1,0 +1,59 @@
+.information {
+  background-color: fade(@basicgreen,85%);
+}
+
+.information__wrapper {
+  padding: 0 20px;
+  margin-bottom: 22px;
+  background-color: fade(@basicgreen,85%);
+  @media (min-width: @tablet) {
+    margin: 0 auto;
+    width: 640px;
+    min-height: 806px;
+  }
+  @media (min-width: @desktop) {
+    width: 1220px;
+    min-height: 470px;
+    margin: 0 auto;
+  }
+}
+
+.information__title {
+  margin: 0;
+  padding: 25px 0;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: @white;
+}
+
+.information__slogan {
+  margin: 0;
+  padding-bottom: 25px;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: @white;
+}
+
+.information__link-form {
+  display: block;
+  width: 280px;
+  padding: 7px 0;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: @white;
+  background-color: @basicgreen;
+
+  &:hover {
+    background-color: @basicgreendark;
+  }
+
+  &:active {
+    color: fade(@white, 50%);
+  }
+}
