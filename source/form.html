@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -20,7 +22,7 @@
       <nav class="main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--active">
-            <a>
+            <a href="index.html">
               Главная
             </a>
           </li>
@@ -48,10 +50,10 @@
           <input class="filter-cat__text-input" type="text" name="name" value="барсик">
         </label>
         <label>Вес (кг):*
-          <input class="filter-cat__text-input" type="number" name="weight" value="7">
+          <input class="filter-cat__text-input filter-cat__text-input--weight" type="number" name="weight" value="7">
         </label>
         <label>Возраст (лет):
-          <input class="filter-cat__text-input" type="number" name="age" value="7">
+          <input class="filter-cat__text-input filter-cat__text-input--number" type="number" name="age" value="7">
         </label>
       </fieldset>
       <fieldset class="filter-cat__program-field">
@@ -84,7 +86,7 @@
       </fieldset>
       <fieldset class="filter-cat__comment-field filter-cat__border">
         <legend class="filter-cat__comment-field--legend filter-cat__legend">Комментарий</legend>
-        <textarea class="filter-cat__text-input" name="comment" rows="10">Расскажите обо всех повАдках кота</textarea>
+        <textarea class="filter-cat__text-input filter-cat__text-textarea" name="comment" rows="12">Расскажите обо всех повАдках кота</textarea>
       </fieldset>
       <fieldset class="filter-cat__additional-field filter-cat__border">
         <legend class="filter-cat__additional-field--legend filter-cat__legend">Дополнительно</legend>
@@ -120,14 +122,14 @@
     </form>
     <section class="contacts">
       <h2 class="visually-hidden">Контактная информация</h2>
-      <div class="contacts__wrapper">
+      <div class="contacts__wrapper contacts__wrapper--form">
         <p class="contacts__alert">приглашаем <br>
           к сотрудничеству<br>дилеров!</p>
         <p class="contacts__adress">ул. Большая
           Конюшенная, д. 19/8
           Санкт-Петербург</p>
         <div class="contacts__map">
-          <img src="#" alt="ул. Большая
+          <img src="https://via.placeholder.com/320x362" alt="ул. Большая
             Конюшенная, д. 19/8">
         </div>
       </div>

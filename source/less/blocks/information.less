@@ -1,51 +1,59 @@
-.information__wrapper{
-  background-color: @white;
+.information {
+  background-color: fade(@basicgreen,85%);
 }
 
+.information__wrapper {
+  padding: 0 20px;
+  margin-bottom: 22px;
+  background-color: fade(@basicgreen,85%);
+  @media (min-width: @tablet) {
+    margin: 0 auto;
+    width: 640px;
+    min-height: 806px;
+  }
+  @media (min-width: @desktop) {
+    width: 1220px;
+    min-height: 470px;
+    margin: 0 auto;
+  }
+}
 
-.information__title{
+.information__title {
+  margin: 0;
+  padding: 25px 0;
+  font-weight: 400;
   font-size: 36px;
   line-height: 36px;
   text-align: center;
   color: @white;
-  background-color: fade(@basicgreen,85%);
-  padding-top: 27px;
-  padding-left: 36px;
-  padding-right:35px;
-  padding-bottom: 25px;
-  margin-bottom: 0px;
 }
 
-.information__slogan{
+.information__slogan {
+  margin: 0;
+  padding-bottom: 25px;
   font-size: 14px;
   line-height: 14px;
   text-align: center;
   text-transform: uppercase;
   color: @white;
-  background-color: fade(@basicgreen,85%);
-  padding-left: 60px;
-  padding-right: 62px;
-  padding-bottom: 25px;
-  margin-top: 0px;
 }
 
 .information__link-form {
-  display: inline-block;
-  text-decoration: none;
+  display: block;
   width: 280px;
+  padding: 7px 0;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
   text-transform: uppercase;
-  background-color: @basicgreen;
   color: @white;
-  margin-left: 20px;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  &:hover{
+  background-color: @basicgreen;
+
+  &:hover {
     background-color: @basicgreendark;
   }
-  &:active{
-    color: fade( @white, 50%);
+
+  &:active {
+    color: fade(@white, 50%);
   }
 }
