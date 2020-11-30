@@ -1,19 +1,30 @@
 .example {
   background-color: @examplegrey;
+  @media (min-width: @tablet) {
+    background: linear-gradient(to bottom, @white 50%, @examplegrey 50%);
+  }
+  @media (min-width: @desktop) {
+    background: linear-gradient(to bottom, @white 10%, @examplegrey 90%);
+  }
 }
 
 .example__wrapper {
   padding: 33px 20px 37px;
-  background-color: @examplegrey;
   @media (min-width: @tablet) {
-    width: 640px;
-    min-height: 1078px;
+    width: 708px;
     margin: 0 auto;
+    padding: 43px 30px 70px;
   }
   @media (min-width: @desktop) {
     width: 1220px;
-    min-height: 598px;
     margin: 0 auto;
+    padding: 58px 110px 75px;
+  }
+}
+
+.example__calculation {
+  @media (min-width: @desktop) {
+    width: 436px;
   }
 }
 
@@ -24,6 +35,14 @@
   font-weight: 400;
   line-height: 40px;
   text-align: left;
+  @media (min-width: @tablet) {
+    padding-bottom: 63px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+  @media (min-width: @desktop) {
+    padding-bottom: 146px;
+  }
 }
 
 .example__decrtiption {
@@ -33,12 +52,24 @@
   font-size: 14px;
   line-height: 18px;
   color: @specialdarkgrey;
+  @media (min-width: @tablet) {
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 54px;
+  }
+  @media (min-width: @desktop) {
+    padding-bottom: 69px;
+  }
 }
 
 .example__number {
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
+  @media (min-width: @tablet) {
+    font-size: 30px;
+    line-height: 36px;
+  }
 }
 
 .example__text {
@@ -53,12 +84,19 @@
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
+  @media (min-width: @tablet) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .example__toggles {
   margin-top: 24px;
   display: flex;
   justify-content: space-between;
+  @media (min-width: @desktop) {
+    width: 574px;
+  }
 }
 
 .slider__toggle {

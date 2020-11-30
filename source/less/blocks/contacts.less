@@ -3,6 +3,18 @@
   padding: 28px 20px 0;
   display: flex;
   flex-wrap: wrap;
+  @media (min-width: @tablet) {
+    width: 640px;
+    padding: 66px 71px 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  @media (min-width: @desktop) {
+    padding: 95px 110px 0;
+    margin: 0 auto;
+    width: 1220px;
+  }
 }
 
 .contacts__wrapper--form {
@@ -13,9 +25,12 @@
   margin: 0;
   font-size: 16px;
   line-height: 18px;
-  font-weight: 400;
   text-transform: uppercase;
   font-weight: bold;
+  @media (min-width: @tablet) {
+    font-size: 20px;
+    line-height: 21px;
+  }
 }
 
 .contacts__adress {
@@ -24,8 +39,23 @@
   font-size: 14px;
   line-height: 20px;
   color: @specialdarkgrey;
+  @media (min-width: @tablet) {
+    width: 159px;
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .contacts__map {
   padding-top: 24px;
+  @media (min-width: @tablet) {
+    padding-top: 51px;
+    width: 768px;
+    height: 400px;
+  }
+  @media (min-width: @desktop) {
+    padding-top: 0px;
+    width: 1440px;
+    height: 400px;
+  }
 }
