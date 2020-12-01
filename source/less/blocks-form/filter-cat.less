@@ -2,6 +2,23 @@
 
 .filter-cat {
   padding: 0 20px;
+  @media (min-width: @tablet) {
+    padding: 0;
+    margin: 0 auto;
+    width: 630px;
+  }
+  @media (min-width: @desktop) {
+    display: block;
+    margin: 0 auto;
+    width: 1220px;
+  }
+}
+
+.filter-cat__container {
+  @media (min-width: @desktop) {
+    display: flex;
+    margin-bottom: 69px;
+  }
 }
 
 .filter-cat__list {
@@ -13,26 +30,30 @@
 .filter-cat__legend {
   font-size: 24px;
   line-height: 26px;
-}
-//Information
-
-.filter-cat__information-field {
-  padding: 0;
-  margin: 0;
-  padding-bottom: 24px;
-  border: none;
-  border-bottom: 1px solid @formtable;
+  margin-bottom: 37px;
+  @media (min-width: @tablet) {
+    margin-bottom: 76px;
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
-.filter-cat__information-field label {
+.filter-cat__label {
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   color: @specialdarkgrey;
+  @media (min-width: @tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .filter-cat__text-input {
   margin-bottom: 13px;
+  margin-left: 14px;
+  padding: 13px 0 13px 15px;
+  font-family: 'Oswald', Arial, sans-serif;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
@@ -50,26 +71,97 @@
 }
 
 .filter-cat__text-input {
-  width: 222px;
-  min-height: 42px;
+  @media (min-width: @tablet) {
+    margin-left: 23px;
+    margin-bottom: 20px;
+    padding: 11px 19px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  @media (min-width: @desktop) {
+    margin-left: 13px;
+    padding: 11px 19px 10px;
+  }
+}
+//Information
+
+.filter-cat__information-field {
+  padding: 0;
+  margin: 0;
+  padding-bottom: 24px;
+  border: none;
+  border-bottom: 1px solid @formtable;
+  @media (min-width: @tablet) {
+    margin-bottom: 72px;
+    padding: 0;
+    border-bottom: none;
+  }
+  @media (min-width: @desktop) {
+    width: 570px;
+    margin-right: 80px;
+    margin-bottom: 0;
+  }
+}
+
+.filter-cat__text-input {
+  width: 200px;
 
   &--weight {
-    width: 183px;
-    min-height: 42px;
+    width: 178px;
   }
 
   &--number {
-    margin: 0;
-    width: 140px;
-    min-height: 42px;
+    margin-bottom: 0;
+    width: 145px;
+  }
+}
+
+.filter-cat__text-input {
+  @media (min-width: @tablet) {
+    width: 506px;
+
+    &--weight {
+      width: 477px;
+    }
+
+    &--number {
+      width: 436px;
+    }
+  }
+}
+
+.filter-cat__text-input {
+  @media (min-width: @desktop) {
+    width: 465px;
+
+    &--weight {
+      width: 435px;
+    }
+
+    &--number {
+      width: 396px;
+    }
   }
 }
 //Program
+
 .filter-cat__program-field {
   padding-top: 20px;
   margin: 0 0 26px;
   border: none;
   border-bottom: 1px solid @formtable;
+  @media (min-width: @tablet) {
+    padding: 0;
+    margin: 0 0 71px;
+    width: 628px;
+    border: 1px solid @forminput;
+  }
+  @media (min-width: @desktop) {
+    padding: 30px 0;
+    margin: 0;
+    width: 482px;
+    border: 1px solid @forminput;
+  }
 }
 
 .filter-cat__program-item {
@@ -79,6 +171,20 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @specialsuperdark;
+  @media (min-width: @tablet) {
+    padding: 25px 0 23px 71px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  @media (min-width: @desktop) {
+    padding: 0 0 23px 88px;
+    font-size: 20px;
+    line-height: 30px;
+
+    &--advice {
+      padding-bottom: 0;
+    }
+  }
 }
 //Contacts
 
@@ -86,24 +192,49 @@
   margin: 0;
   padding: 0;
   margin-bottom: 27px;
-}
-
-.filter-cat__contacts-field--legend {
-  padding-bottom: 32px;
+  @media (min-width: @tablet) {
+    margin-bottom: 65px;
+  }
+  @media (min-width: @desktop) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 91px;
+  }
 }
 
 .filter-cat__email-input {
-  width: 213px;
+  width: 185px;
+  @media (min-width: @tablet) {
+    width: 500px;
+  }
+  @media (min-width: @desktop) {
+    width: 486px;
+  }
 }
 
 .filter-cat__tel-input {
-  width: 190px;
+  width: 170px;
+  @media (min-width: @tablet) {
+    width: 479px;
+  }
+  @media (min-width: @desktop) {
+    width: 432px;
+  }
 }
 // Comments
 
 .filter-cat__comment-field {
   margin: 0;
-  padding: 34px 0 0;
+  padding: 0;
+  margin-bottom: 21px;
+  @media (min-width: @tablet) {
+    padding: 0;
+    margin-bottom: 71px;
+  }
+  @media (min-width: @desktop) {
+    margin-top: 88px;
+    margin-bottom: 91px;
+  }
 }
 
 .filter-cat__text-textarea {
@@ -111,36 +242,50 @@
   padding: 13px 15px;
   width: 250px;
   height: 124px;
+  @media (min-width: @tablet) {
+    width: 601px;
+    height: 174px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  @media (min-width: @desktop) {
+    width: 1220px;
+    height: 174px;
+  }
 }
 //Additional
 
 .filter-cat__additional-field {
   margin: 0;
   padding: 0;
+}
 
-  &--legend {
-    margin-bottom: 34px;
+.filter-cat__additional-list {
+  @media (min-width: @tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
 .filter-cat__additional-item {
   padding-bottom: 13px;
   padding-left: 44px;
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
+  @media (min-width: @tablet) {
+    display: block;
+    width: 161px;
+    padding-left: 60px;
+    padding-bottom: 37px;
+  }
 }
 
 .filter-cat__border {
-  border: 2px solid @basicgreen;
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
+  border: none;
+  border-top: 2px solid @basicgreen;
 }
 //Buttom
 
-.filter-cat__button {
-  margin-top: 34px;
+.filter-cat__button-form-button {
   width: 280px;
   text-align: center;
   font-size: 16px;
@@ -161,11 +306,39 @@
     color: fade(@white; 30%);
   }
 }
+
+.filter-cat__button-form-button {
+  @media (min-width: @tablet) {
+    width: 289px;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 13px 0;
+  }
+  @media (min-width: @desktop) {
+    width: 568px;
+  }
+}
+
+.filter-cat__button-form {
+  margin-top: 34px;
+  @media (min-width: @tablet) {
+    margin-top: 22px;
+    margin-bottom: 85px;
+    display: flex;
+  }
+}
 //small  textare
 
-.filter-cat__small {
+.filter-cat__button-form-small {
   font-family: Arial, sans-serif;
   font-size: 14px;
   line-height: 16px;
   text-align: center;
+  @media (min-width: @tablet) {
+    font-size: 16px;
+    padding-left: 61px;
+  }
+  @media (min-width: @desktop) {
+    padding-left: 81px;
+  }
 }

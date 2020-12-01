@@ -1,16 +1,39 @@
-.title-form {
-  margin: 0px;
+.title-container{
+  @media (min-width: @desktop) {
+    display: block;
+    margin: 0 auto;
+    width: 1220px;
+  }
+}
+
+.title-container__title {
+  margin: 0;
   padding: 27px 20px 37px;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
   text-align: left;
+  @media (min-width: @tablet) {
+    padding: 0 71px 54px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
 }
 
-.text-form {
-  margin: 0px;
+.title-container__text {
+  margin: 0;
   padding: 0 20px 39px;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  @media (min-width: @tablet) {
+    width: 323px;
+    padding: 0 71px 66px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  @media (min-width: @desktop) {
+    width: 323px;
+  }
 }
