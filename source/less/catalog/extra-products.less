@@ -1,0 +1,126 @@
+.extra-products {
+  @media (min-width: @desktop) {
+    margin-bottom: 86px;
+  }
+}
+
+.extra-products__wrapper {
+  padding: 0 20px;
+  @media (min-width:@tablet) {
+    width: 708px;
+    padding: 0;
+    margin: 0 auto;
+  }
+  @media (min-width: @desktop) {
+    width: 1220px;
+  }
+}
+
+.extra-products__container {
+  @media (min-width: @desktop) {
+    display: flex;
+  }
+}
+
+.extra-products__title {
+  margin-bottom: 35px;
+  margin-top: 28px;
+  font-size: 24px;
+  line-height: 24px;
+  @media (min-width: @tablet) {
+    margin: 0 0 81px 37px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+  @media (min-width: @desktop) {
+    margin: 0 0 81px;
+  }
+}
+
+.extra-products__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  @media (min-width:@tablet) {
+    border: 1px solid @specialgreylight;
+  }
+  @media (min-width: @desktop) {
+    width: 895px;
+    border: none;
+  }
+}
+
+.extra-products__title-item {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: @specialsuperdark;
+  @media (min-width: @tablet) {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  @media (min-width: @desktop) {
+    &--sugar {
+      padding-right: 163px;
+    }
+
+    &--water {
+      padding-right: 195px;
+    }
+
+    &--milk {
+      padding-right: 256px;
+    }
+
+    &--vitamins {
+      padding-right: 234px;
+    }
+  }
+}
+
+.extra-products__item {
+  margin-bottom: 19px;
+  border-top: 1px solid @specialgreylight;
+  border-bottom: 1px solid @specialgreylight;
+  @media (min-width: @tablet) {
+    padding: 26px 37px 28px 38px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border: none;
+  }
+  @media (min-width: @desktop) {
+    padding: 15px 0 17px;
+    margin: 0;
+    border-top: 1px solid @specialgreylight;
+    border-bottom: 1px solid @specialgreylight;
+  }
+}
+
+.extra-products__table-item {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 14px;
+  color: @specialdarkgrey;
+  @media (min-width: @tablet) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  @media (min-width: @desktop) {
+    width: 284px;
+  }
+}
+
+.extra-products__amount {
+  @media (min-width: @tablet) {
+    padding-right: 51px;
+  }
+  @media (min-width: @desktop) {
+    padding: 0;
+  }
+}
