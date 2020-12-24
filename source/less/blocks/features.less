@@ -18,7 +18,7 @@
   @media (min-width: @desktop) {
     margin: 0 auto;
     width: 1220px;
-    padding: 72px 110px 11px;
+    padding: 0px 110px 11px;
   }
 }
 
@@ -42,11 +42,15 @@
   @media (min-width: @tablet) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 175px;
+    grid-column-gap: 137px;
+    grid-row-gap: 37px;
+    padding-right: 105px;
   }
   @media (min-width: @desktop) {
     grid-template-columns: 230px 246px 248px 250px;
-    grid-column-gap: 80px;
+    grid-column-gap: 88px;
+
+    padding: 0;
   }
 }
 
@@ -58,10 +62,11 @@
   color: @specialdarkgrey;
   @media (min-width: @tablet) {
     padding: 151px 0 57px;
-    width: 250px;
+    width: 245px;
     font-size: 16px;
     line-height: 24px;
-    text-align: left;
+
+
   }
   @media (min-width: @desktop) {
     padding: 151px 0 57px;

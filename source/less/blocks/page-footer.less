@@ -5,16 +5,44 @@
 .page-footer__wrapper {
   padding: 39px 20px 22px;
   background-color: @basicgrey;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
   @media (min-width: @tablet) {
     margin: 0 auto;
     width: 708px;
+    flex-direction: row;
     padding: 60px 30px 65px;
-    display: flex;
-    justify-content: space-between;
   }
+
   @media (min-width: @desktop) {
     width: 1220px;
     margin: 0 auto;
     padding: 57px 110px;
+  }
+}
+
+.page-footer__logo-text {
+  padding-bottom: 32px;
+  @media (min-width: @tablet) {
+    width: 128px;
+    height: 24px;
+    padding: 0;
+  }
+}
+
+
+.page-footer__pic {
+  width: 100%;
+}
+
+.page-footer__copyright {
+  align-self: flex-start;
+  padding-top: 22px;
+  @media (min-width: @tablet) {
+  padding: 0;
   }
 }

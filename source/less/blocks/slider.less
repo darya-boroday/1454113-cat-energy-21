@@ -1,0 +1,134 @@
+.slider {
+  @media (min-width: @desktop) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+.slider__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slider__item {
+  display: none;
+
+  &--active {
+    display: block;
+    padding: 0;
+    text-align: center;
+    margin-top: 42px;
+  }
+}
+
+
+.slider__pic {
+  width: 100%;
+
+  @media (min-width: @tablet) {
+    height: 524px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 640px;
+    height: 497px;
+    margin-top: 0;
+  }
+}
+
+.slider__controls {
+  padding: 18px 0px 33px 46px;
+  @media (min-width: @tablet) {
+    width: 572px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop) {
+    justify-content: flex-end;
+    margin: 0;
+  }
+}
+
+.slider__toggles {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  @media (min-width: @tablet) {
+    width: 598px;
+    padding: 0;
+    margin: 32px 0 0;
+  }
+  @media (min-width: @desktop) {
+    width: 574px;
+    margin: 18px 0 0;
+  }
+}
+
+
+
+.slider__range {
+  position: relative;
+  height: 14px;
+  width: 84px;
+  background-color: @white;
+  border-radius: 10px;
+  @media (min-width: @tablet) {
+    width: 428px;
+    height: 6px;
+    background-color: @specialgrey;
+    margin: 0 20px 0 24px;
+  }
+}
+
+.slider__range-scale {
+  height: 6px;
+  margin-top: 4px;
+  margin-left: 6px;
+  border-radius: 6px;
+  width: 35px;
+  background-color: @basicgreen;
+  @media (min-width: @tablet) {
+    display: none;
+  }
+}
+
+.slider__range-toggle {
+  @media (min-width: @tablet) {
+    position: absolute;
+    top: -10px;
+    right: 197px;
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: 12px solid @white;
+    background-color: @basicgreen;
+    border-radius: 50%;
+    box-shadow: 1px 1px 1px 1px @specialgrey;
+  }
+}
+
+.slider__button {
+  padding: 4px 18px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  color: @black;
+  background-color: transparent;
+  @media (min-width: @tablet) {
+    padding: 0;
+    display: block;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: normal;
+    border-bottom: 1px solid fade(@black, 10%);
+  }
+
+  &:active {
+    border-bottom: 1px solid @specialgreydark;
+  }
+}

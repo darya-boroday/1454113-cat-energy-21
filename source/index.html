@@ -6,33 +6,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
   <header class="page-header">
     <div class="page-header__wrapper">
-      <a class="page-header__logo logo">
-        <img src="https://via.placeholder.com/33x37" width="33" height="37" alt="Логотип cat energy">
-      </a>
-      <a class="page-header__logo-text logo-text">
-        <img src="https://via.placeholder.com/101x18" width="101" height="18" alt="Cat Energy">
-      </a>
-      <button class="toggle-main-nav" type="button">Открыть меню</button>
+      <div class="page-header__wrapper-upper">
+        <a class="page-header__logo logo">
+          <img src="https://via.placeholder.com/33x37" width="33" height="37" alt="Логотип cat energy">
+        </a>
+        <a class="page-header__logo-text logo-text">
+          <img src="https://via.placeholder.com/101x18" width="101" height="18" alt="Cat Energy">
+        </a>
+        <button class="toggle-main-nav toggle-main--open" type="button" aria-label="Открыть меню"></button>
+      </div>
       <nav class="main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--active">
-            <a>
+            <a class="main-nav__link">
               Главная
             </a>
           </li>
           <li class="main-nav__item">
-            <a href="catalog.html">
+            <a class="main-nav__link" href="catalog.html">
               Каталог продукции
             </a>
           </li>
           <li class="main-nav__item">
-            <a href="form.html">
+            <a class="main-nav__link" href="form.html">
               Подбор программы
             </a>
           </li>
@@ -43,12 +46,15 @@
   <main class="page-main">
     <section class="information">
       <div class="information__wrapper">
-        <h1 class="information__title">Функциональное питание для котов</h1>
-        <p class="information__slogan">Занялся собой? Займись котом!</p>
-        <div class="information__img">
-          <img src="https://via.placeholder.com/280x270" width="280" height="270" alt="Корм Кэт энерджи">
+        <div class="information__wrapper-upper">
+          <h1 class="information__title">Функциональное питание для котов</h1>
+          <p class="information__slogan">Занялся собой? Займись котом!</p>
+          <a class="information__link-form" href="form.html">Подобрать программу</a>
         </div>
-        <a class="information__link-form" href="form.html">Подобрать программу</a>
+        <div class="information__img">
+          <img class="information__pic" src="https://via.placeholder.com/280x270" width="280" height="270" alt="Корм Кэт энерджи">
+        </div>
+        <a class="information__link-form-exrta" href="form.html">Подобрать программу</a>
       </div>
     </section>
     <section class="directions-of-work">
@@ -61,7 +67,7 @@
         </div>
         <div class="directions-of-work__type directions-of-work__type--fat">
           <h3 class="directions-of-work__title">Набор массы</h3>
-          <p class="directions-of-work__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+          <p class="directions-of-work__description directions-of-work__description--weight">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
           <a class="directions-of-work__catalog-link" href="#">КАТАЛОГ PRO</a>
         </div>
       </div>
@@ -93,44 +99,66 @@
     </section>
     <section class="example">
       <div class="example__wrapper">
-        <h2 class="example__title">Живой пример</h2>
-        <div class="example__calculation">
+        <div class="example__wrapper-upper">
+          <h2 class="example__title">Живой пример</h2>
           <p class="example__decrtiption">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
           </p>
-          <div class="example__weigth">
-            <span class="example__number">5 КГ</span>
-            <span class="example__text">снижение веса</span>
+          <div class="example__wrapper-one">
+            <div class="example__wrapper-table">
+              <div class="example__weigth">
+                <p class="example__number">5 КГ</p>
+                <p class="example__text example__text-loosing">снижение веса</p>
+              </div>
+              <div class="example__time">
+                <p class="example__number">60 ДНЕЙ</p>
+                <p class="example__text">затрачено времени</p>
+              </div>
+            </div>
+            <div class="example__spendings">
+              <p class="example__spendings-text">Затраты на питание: </p>
+              <p class="example__spendings-money">15 000 РУБ.</p>
+            </div>
           </div>
-          <div class="example__time">
-            <span class="example__number">60 ДНЕЙ</span>
-            <span class="example__text">Затрачено времени</span>
-          </div>
-          <p class="example__spendings">Затраты на питание: 15 000 РУБ. </p>
         </div>
-        <ul class="example__slider slider">
-          <li class="example__item slider-item">
-            <img src="#" alt="fat cat" width="311" height="232">
-          </li>
-          <li class="example__item slider-item">
-            <img src="#" alt="slim cat" width="311" height="232">
-          </li>
-        </ul>
-        <div class="example__toggles slider__toggles">
-          <button class="slider__toggle slider__toggle--current" type="button">было</button>
-          <button class="slider__toggle" type="button">стало</button>
+        <div class="slider">
+          <ul class="slider__list">
+            <li class="slider__item slider__item--active">
+              <img class="slider__pic" src="https://via.placeholder.com/311x232" alt="fat cat" width="311" height="232">
+            </li>
+            <li class="slider__item">
+              <img class="slider__pic" src="#" alt="slim cat" width="311" height="240">
+            </li>
+          </ul>
+          <div class="slider__controls">
+            <div class="slider__toggles">
+              <button class="slider__button slider__button--current" type="button">было
+              </button>
+              <div class="slider__range">
+                <div class="slider__range-scale">
+                  <div class="slider__range-bar"></div>
+                </div>
+                <div class="slider__range-toggle"></div>
+              </div>
+              <button class="slider__button" type="button">стало</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <section class="contacts">
       <h2 class="visually-hidden">Контактная информация</h2>
       <div class="contacts__wrapper">
-        <p class="contacts__alert">приглашаем <br>
-          к сотрудничеству<br>дилеров!</p>
-        <p class="contacts__adress">ул. Большая
-          Конюшенная, д. 19/8
-          Санкт-Петербург</p>
+        <div class="contacts__wrapper-one">
+          <p class="contacts__alert">приглашаем <br>
+            к сотрудничеству<br>дилеров!</p>
+          <div class="contacts__adress">
+            <p class="contacts__adress-street">ул. Большая
+              Конюшенная, д. 19/8 </p>
+            <p class="contacts__adress-city"> Санкт-Петербург</p>
+          </div>
+        </div>
         <div class="contacts__map">
-          <img src="https://via.placeholder.com/320x362" alt="ул. Большая
+          <img class="contacts__map-pic" src="https://via.placeholder.com/320x362" alt="ул. Большая
               Конюшенная, д. 19/8">
         </div>
       </div>
@@ -139,7 +167,7 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <div class="page-footer__logo-text logo-text">
-        <img src="#" width="128" height="24" alt="cat energy">
+        <img class="page-footer__pic" src="https://via.placeholder.com/128x24" width="128" height="24" alt="cat energy">
       </div>
       <div class="page-footer__social social">
         <h2 class="visually-hidden"> Мы в социальных сетях!</h2>
