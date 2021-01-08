@@ -1,4 +1,10 @@
-.title-container{
+.title-container {
+  @media (min-width: @tablet) {
+    padding: 0;
+    margin: 0 auto;
+    width: 626px;
+  }
+
   @media (min-width: @desktop) {
     display: block;
     margin: 0 auto;
@@ -13,23 +19,29 @@
   line-height: 36px;
   font-weight: 400;
   text-align: left;
+
   @media (min-width: @tablet) {
-    padding: 0 71px 54px;
+    padding: 0 0px 54px;
     font-size: 60px;
     line-height: 60px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-top: 53px;
   }
 
 }
 
 .title-container__text {
   margin: 0;
+  width: 226px;
   padding: 0 20px 39px;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
   @media (min-width: @tablet) {
     width: 323px;
-    padding: 0 71px 66px;
+    padding: 0 0px 68px;
     font-size: 20px;
     line-height: 30px;
   }

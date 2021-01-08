@@ -13,13 +13,13 @@
   <header class="page-header page-header--form">
     <div class="page-header__wrapper">
       <div class="page-header__wrapper-upper">
-        <a class="page-header__logo logo" href="index.html">
-          <img src="#" width="33" height="37" alt="Логотип cat energy">
+        <a class="page-header__logo logo">
+          <img src="https://via.placeholder.com/33x37" width="33" height="37" alt="Логотип cat energy">
         </a>
-        <a class="page-header__logo-text logo-text" href="index.html">
-          <img src="#" width="101" height="18" alt="Cat Energy">
+        <a class="page-header__logo-text logo-text">
+          <img src="https://via.placeholder.com/101x18" width="101" height="18" alt="Cat Energy">
         </a>
-        <button class="toggle-main-nav" type="button">Открыть меню</button>
+        <button class="toggle-main-nav toggle-main--open" type="button" aria-label="Открыть меню"></button>
       </div>
       <nav class="main-nav">
         <ul class="main-nav__list">
@@ -51,94 +51,101 @@
     <form class="filter-cat" action="https://echo.htmlacademy.ru" method="post">
       <div class="filter-cat__container">
         <fieldset class="filter-cat__information-field">
-          <label class="filter-cat__label"> ИМЯ:*
-            <input class="filter-cat__text-input" type="text" name="name" value="барсик">
-          </label>
-          <label class="filter-cat__label">Вес (кг):*
-            <input class="filter-cat__text-input filter-cat__text-input--weight" type="number" name="weight" value="7">
-          </label>
-          <label class="filter-cat__label">Возраст (лет):
-            <input class="filter-cat__text-input filter-cat__text-input--number" type="number" name="age" value="7">
-          </label>
+          <ul class="filter-cat__information-list filter-cat__list">
+            <li class="filter-cat__information-item">
+              <label for="name" class="filter-cat__label"> ИМЯ:* </label>
+              <input class="filter-cat__text-input" id="name" type="text" name="name" value="барсик">
+            </li>
+            <li class="filter-cat__information-item">
+              <label for="weight" class="filter-cat__label filter-cat__label--weight">Вес (кг):* </label>
+              <input class="filter-cat__text-input filter-cat__text-input--weight" id="weight" type="number" name="weight" value="7">
+            </li>
+            <li class="filter-cat__information-item filter-cat__information-item--age">
+              <label for="age" class="filter-cat__label filter-cat__label--age">
+                Возраст (лет): </label>
+              <input class="filter-cat__text-input filter-cat__text-input--age" id="age" type="number" name="age" value="7">
+            </li>
+          </ul>
         </fieldset>
         <fieldset class="filter-cat__program-field">
           <ul class="filter-cat__program-list filter-cat__list">
-            <li class="filter-cat__program-item filter-radio filter-option">
-              <label class="filter-cat__label">
-                <input class="visually-hidden filter-input-radio filter-input" type="radio" name="type-program" checked>Похудение
-              </label>
+            <li class="filter-cat__program-item">
+              <input class="visually-hidden filter-input-radio filter-input" id="loosing-radio" type="radio" name="type-program" checked>
+              <label for="loosing-radio" class="filter-cat__label-program"> Похудение </label>
             </li>
-            <li class="filter-cat__program-item filter-radio filter-option">
-              <label class="filter-cat__label">
-                <input class="visually-hidden filter-input-radio filter-input" type="radio" name="type-program">Набор массы
-              </label>
+            <li class="filter-cat__program-item">
+              <input class="visually-hidden filter-input-radio filter-input" id="getting-radio" type="radio" name="type-program">
+              <label for="getting-radio" class="filter-cat__label-program"> Набор массы </label>
             </li>
-            <li class="filter-cat__program-item filter-cat__program-item--advice filter-radio filter-option">
-              <label class="filter-cat__label">
-                <input class="visually-hidden filter-input-radio filter-input" type="radio" name="type-program">Не знаю (Нужен ваш совет)
-              </label>
+            <li class="filter-cat__program-item filter-cat__program-item--advice">
+              <input class="visually-hidden filter-input-radio filter-input" id="advice-radio" type="radio" name="type-program">
+              <label for="advice-radio" class="filter-cat__label-program">Не знаю (Нужен ваш совет)</label>
             </li>
           </ul>
         </fieldset>
       </div>
       <fieldset class="filter-cat__contacts-field filter-cat__border">
-        <legend class="filter-cat__contacts-field--legend filter-cat__legend">Контактные данные(владельца кота)</legend>
-        <label class="filter-cat__label">E-mail:*
-          <input class="filter-cat__email-input filter-cat__text-input" type="email" name="email" value="kuklachev@gmail.com">
-        </label>
-        <label class="filter-cat__label">Телефон:*
-          <input class="filter-cat__tel-input filter-cat__text-input" type="tel" name="tel" value="8 (960) 900-60-90">
-        </label>
+        <legend class="filter-cat__legend filter-cat__legend--contacts">Контактные данные (владельца кота)</legend>
+        <ul class="filter-cat__contacts-list">
+          <li class="filter-cat__contacts-item filter-cat__contacts-item--email">
+            <label for="email" class="filter-cat__label filter-cat__label--email">E-mail:* </label>
+            <input class="filter-cat__text-input" id="email" type="email" name="email" value="kuklachev@gmail.com">
+          </li>
+          <li class="filter-cat__contacts-item">
+            <label for="number" class="filter-cat__label filter-cat__label--tel">Телефон:* </label>
+            <input class=" filter-cat__text-input" id="number" type="tel" name="tel" value="8 (960) 900-60-90">
+          </li>
+        </ul>
       </fieldset>
       <fieldset class="filter-cat__comment-field filter-cat__border">
-        <legend class="filter-cat__comment-field--legend filter-cat__legend">Комментарий</legend>
-        <textarea class="filter-cat__text-input filter-cat__text-textarea" name="comment" rows="12">Расскажите обо всех повАдках кота</textarea>
+        <legend class="filter-cat__legend--comment filter-cat__legend">Комментарий</legend>
+        <div class="filter-cat__comment-wrapper">
+          <textarea class="filter-cat__text-input filter-cat__text-textarea" name="comment" rows="12">Расскажите обо всех повадках кота</textarea>
+        </div>
       </fieldset>
       <fieldset class="filter-cat__additional-field filter-cat__border">
-        <legend class="filter-cat__additional-field--legend filter-cat__legend">Дополнительно</legend>
+        <legend class="filter-cat__legend--additional filter-cat__legend">Дополнительно</legend>
         <ul class="filter-cat__additional-list filter-cat__list">
-          <li class="filter-cat__additional-item filter-option filter-checkbox">
-            <label class="filter-cat__label">
-              <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="suger" checked>
-              Сахарозаменитель
-            </label>
+          <li class="filter-cat__additional-item">
+            <input class="visually-hidden filter-input-checkbox filter-input" id="sugar-checkbox" type="checkbox" name="suger" checked>
+            <label for="sugar-checkbox" class="filter-cat__label-additional">Сахарозаменитель</label>
           </li>
-          <li class="filter-cat__additional-item filter-option filter-checkbox">
-            <label class="filter-cat__label">
-              <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="water">
-              Питьевая вода
-            </label>
+          <li class="filter-cat__additional-item">
+            <input class="visually-hidden filter-input-checkbox filter-input" id="water-checkbox" type="checkbox" name="water">
+            <label for="water-checkbox" class="filter-cat__label-additional">Питьевая вода </label>
           </li>
-          <li class="filter-cat__additional-item filter-option filter-checkbox">
-            <label class="filter-cat__label">
-              <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="milk">
-              Молоко
-            </label>
+          <li class="filter-cat__additional-item">
+            <input class="visually-hidden filter-input-checkbox filter-input" id="milk-checkbox" type="checkbox" name="milk">
+            <label for="milk-checkbox" class="filter-cat__label-additional">Молоко</label>
           </li>
-          <li class="filter-cat__additional-item filter-option filter-checkbox">
-            <label class="filter-cat__label">
-              <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="vitamins">
-              Витамины
-            </label>
+          <li class="filter-cat__additional-item">
+            <input class="visually-hidden filter-input-checkbox filter-input" id="vitamins-checkbox" type="checkbox" name="vitamins">
+            <label for="vitamins-checkbox" class="filter-cat__label-additional">Витамины </label>
           </li>
         </ul>
       </fieldset>
       <div class="filter-cat__button-form">
-        <button type="submit" class="filter-cat__button-form-button" aria-label="отправить заявку">ОТПРАВИТЬ ЗАЯВКУ</button>
-        <p class="filter-cat__button-form-small">* — Обязательные поля</p>
+        <div class="filter-cat__button-form-wrapper">
+          <button type="submit" class="filter-cat__button-form-button" aria-label="отправить заявку">ОТПРАВИТЬ ЗАЯВКУ</button>
+          <p class="filter-cat__button-form-small">* — Обязательные поля</p>
+        </div>
       </div>
     </form>
     <section class="contacts contacts--form">
       <h2 class="visually-hidden">Контактная информация</h2>
       <div class="contacts__wrapper">
-        <p class="contacts__alert">приглашаем <br>
-          к сотрудничеству<br>дилеров!</p>
-        <p class="contacts__adress">ул. Большая
-          Конюшенная, д. 19/8
-          Санкт-Петербург</p>
+        <div class="contacts__wrapper-one">
+          <p class="contacts__alert">приглашаем <br>
+            к сотрудничеству<br>дилеров!</p>
+          <div class="contacts__adress">
+            <p class="contacts__adress-street">ул. Большая
+              Конюшенная, д. 19/8 </p>
+            <p class="contacts__adress-city"> Санкт-Петербург</p>
+          </div>
+        </div>
         <div class="contacts__map">
-          <img src="https://via.placeholder.com/320x362" alt="ул. Большая
-            Конюшенная, д. 19/8">
+          <img class="contacts__map-pic" src="https://via.placeholder.com/320x362" alt="ул. Большая
+              Конюшенная, д. 19/8">
         </div>
       </div>
     </section>
