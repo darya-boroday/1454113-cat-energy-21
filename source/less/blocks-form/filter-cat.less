@@ -13,10 +13,23 @@
   padding-right: 23px;
   font-size: 24px;
   line-height: 26px;
+  position: relative;
+  overflow: hidden;
+
+  &--contacts::after{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    top:30%;
+    width: 100%;
+    margin-left: 50px;
+    margin-right: -100%;
+    border-top: 2px solid @basicgreen;
+}
 
   @media (min-width: @tablet) {
     margin: 0 50px 75px 30px;
-    padding: 0 42px;
     font-size: 36px;
     line-height: 36px;
 
@@ -26,10 +39,20 @@
   }
 
   @media (min-width: @desktop) {
-    margin: 0 50px 75px 68px;
+    margin: 0 auto;
+    width: 1220px;
+    position: relative;
 
-    &--additional {
-      margin-bottom: 62px;
+    &::after {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      position: absolute;
+      top:48%;
+      width: 100%;
+      margin-left: 20px;
+      margin-right: -100%;
+      border-top: 2px solid @basicgreen;
     }
   }
 }
@@ -294,17 +317,21 @@
 .filter-cat__contacts-field {
   margin: 0;
   padding: 0;
+  border: none;
+  overflow: hidden;
 
   @media (min-width: @tablet) {
     margin-top: 76px;
     margin-bottom: 45px;
+    border: none;
+    border-top: 2px solid @basicgreen;
   }
 
   @media (min-width: @desktop) {
     margin-top: 71px;
+    margin-bottom: 46px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 46px;
   }
 }
 
@@ -339,6 +366,7 @@
 
   @media (min-width: @desktop) {
     width: 570px;
+    margin-top: 75px;
 
     &--email {
       width: 569px;
@@ -352,10 +380,19 @@
   margin: 0;
   padding: 0;
   margin-bottom: 24px;
+  border: none;
+  border-top: 2px solid @basicgreen;
+  overflow: hidden;
 
   @media (min-width: @tablet) {
-    padding: 0;
     margin-bottom: 65px;
+    border: none;
+    border-top: 2px solid @basicgreen;
+  }
+
+  @media (min-width: @desktop) {
+    border: none;
+    border-top: 2px solid @basicgreen;
   }
 }
 
@@ -392,6 +429,7 @@
   @media (min-width: @desktop) {
     width: 1188px;
     height: 163px;
+    margin-top: 76px;
   }
 }
 //Additional
@@ -399,13 +437,23 @@
 .filter-cat__additional-field {
   margin: 0;
   padding: 0;
+  border: none;
+  border-top: 2px solid @basicgreen;
+  overflow: hidden;
+
 
   @media (min-width: @tablet) {
     margin-bottom: 58px;
+    border: none;
+    border-top: 2px solid @basicgreen;
   }
 
   @media (min-width: @desktop) {
     margin-bottom: 66px;
+    border: none;
+    border-top: 2px solid @basicgreen;
+
+
   }
 }
 
@@ -424,8 +472,9 @@
 
   @media (min-width: @desktop) {
     width: 1220px;
-    padding: 0 158px;
-    display: flex;
+    padding: 0 110px;
+    grid-template-columns: 221px 221px 221px 221px;
+    grid-column-gap: 104px;
   }
 }
 
@@ -442,11 +491,12 @@
     font-size: 20px;
     line-height: 30px;
   }
-}
 
-.filter-cat__border {
-  border: none;
-  border-top: 2px solid @basicgreen;
+  @media (min-width: @desktop) {
+    margin-top: 60px;
+    padding-left: 50px;
+    padding-bottom: 3px;
+  }
 }
 
 .filter-cat__label-additional {
@@ -454,13 +504,12 @@
   display: block;
 }
 
-
 .filter-input-checkbox+.filter-cat__label-additional::before {
   display: block;
   content: "";
   position: absolute;
   left: -45px;
-  top:-7px;
+  top:-9px;
   width: 30px;
   height: 30px;
   border: 1px solid @specialgrey;
@@ -471,6 +520,7 @@
     left: -60px;
   }
 }
+
 
 //Buttom
 
